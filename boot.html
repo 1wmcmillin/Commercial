@@ -15,7 +15,7 @@
 
      </header>
      <section class = "container">
-        <form action = "boot.html" method = "GET" class = "row">
+        <div class = "row">
           <div class = "col">
             <h3 class = "title">Option A</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, facere pariatur eos aliquam quis, animi veritatis consequatur quidem, vitae debitis cumque velit nesciunt adipisci sequi consectetur illo soluta earum sapiente.</p>
@@ -31,16 +31,27 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil doloremque iste ea sequi praesentium labore, repellat, obcaecati porro animi et rem maiores vel cumque quas aliquid, suscipit illum quasi laborum?</p>
             <a class = "price title" href = "">$29.99</a>
           </div>
-          <div id = "cart" class = "row">
+          <form id = "cart" class = "row" method = "GET" action = "boot.html1" oninput="calculate()">
             <select name="options" id="options">
               <option value="$19.99 - Buy A"></option>
               <option value="$24.99 - Buy B"></option>
               <option value="$29.99 - Buy C"></option>
             </select>
-          </div>
-        </form>
+            Months: <input id = "time" type = "number" value = "12" min = "0">
+            Total: <output id = "result" name = "out" for = "option time"></output>
+          </form>
+        </div>
          
      </section>
+     <script>
+       function calculate()(
+        let doc = document;
+        let option = doc.getElementById("option");
+        let time = doc.getElementById("time");
+        let result = doc.getElementById("result");
+         result.value = "$" + parseInt(option.value) + parseInt(time.value);
+       )
+     </script>
 
 
 
