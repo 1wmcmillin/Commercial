@@ -4,7 +4,11 @@ header{
     text-align: center;
 }
 .title{
-    text-align : center
+    text-align: center
+}
+.option{
+    margin: 24px 0;
+    padding: 4px;
 }
 .price{
     display: block;
@@ -20,10 +24,13 @@ header{
 }
 
 #cart > select,
-#cart > input{
+#cart > input,
+#cart > output{
+    width: 75px;
     margin-right: 16px;
 
 }
 output{
     font-weight: 700;
+    width: 100px;
 }
